@@ -1,0 +1,6 @@
+jms_serializer:
+    metadata:
+        directories:
+            owl-equipment:
+                namespace_prefix: "Owl\\Component\\Equipment"
+                path: "@OwlEquipmentBundle/Resources/config/serializer"

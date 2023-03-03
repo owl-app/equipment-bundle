@@ -1,0 +1,8 @@
+Owl\Component\Equipment\Model\EquipmentAttribute:
+    exclusion_policy: ALL
+    xml_root_name: equipment-attribute
+    properties:
+        name:
+            expose: true
+            type: string
+            groups: [Autocomplete]
