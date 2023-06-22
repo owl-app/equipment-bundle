@@ -15,7 +15,11 @@ final class EquipmentAttributeChoiceType extends AttributeChoiceType
         $resolver
             ->setDefaults([
                 'choices' => function (Options $options) {
-                    return !is_null($options['category']) ? $this->attributeRepository->findByCategory($options['category']) : [];
+                    if(!is_null($options['category'])) {
+                        return  $this->attributeRepository->findByCategory($options['category'])->getQuery()->getResult();
+                    }
+
+                    return $this->attributeRepository->findAll();
                 },
                 'choice_value' => 'code',
                 'choice_label' => 'name',
