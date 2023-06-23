@@ -40,11 +40,6 @@ class EquipmentAttributeController extends BaseController
 
     public function renderAttributeValueFormsAction(Request $request): Response
     {
-        $configuration = $this->requestConfigurationFactory->create($this->metadata, $request);
-
-        $resource = $this->findOr404($configuration);
-        $this->isGrantedOr403($configuration, 'attribute_froms', $resource);
-
         $template = $request->attributes->get('template', '@SyliusAttribute/attributeValueForms.html.twig');
         $categoryId = $request->query->get('categoryId');
 
