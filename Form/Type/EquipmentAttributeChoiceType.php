@@ -29,6 +29,11 @@ final class EquipmentAttributeChoiceType extends AttributeChoiceType
         ;
     }
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'sylius_product_attribute_choice'
+     */
     public function getBlockPrefix(): string
     {
         return 'sylius_product_attribute_choice';

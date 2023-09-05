@@ -8,6 +8,11 @@ use Owl\Bundle\AttributeBundle\Form\Type\AttributeTranslationType;
 
 final class EquipmentAttributeTranslationType extends AttributeTranslationType
 {
+    /**
+     * @return string
+     *
+     * @psalm-return 'sylius_product_attribute_translation'
+     */
     public function getBlockPrefix(): string
     {
         return 'sylius_product_attribute_translation';

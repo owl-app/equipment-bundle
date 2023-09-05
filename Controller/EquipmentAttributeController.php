@@ -71,7 +71,9 @@ class EquipmentAttributeController extends BaseController
     /**
      * @param array|string[] $localeCodes
      *
-     * @return array|FormView[]
+     * @return FormView[]
+     *
+     * @psalm-return array{'': FormView}
      */
     protected function getAttributeFormsInAllLocales(AttributeInterface $attribute, array $localeCodes): array
     {

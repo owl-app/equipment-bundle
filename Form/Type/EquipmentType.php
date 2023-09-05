@@ -48,6 +48,11 @@ final class EquipmentType extends AbstractResourceType
         ;
     }
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'owl_equipment'
+     */
     public function getBlockPrefix(): string
     {
         return 'owl_equipment';
