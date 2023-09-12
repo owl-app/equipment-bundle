@@ -6,7 +6,7 @@ namespace Owl\Bundle\EquipmentBundle\Controller;
 
 use Owl\Bridge\SyliusResource\Controller\BaseController;
 use Owl\Bundle\EquipmentBundle\Form\Type\EquipmentAttributeChoiceType;
-use Owl\Component\Attribute\Model\AttributeInterface;
+use Owl\Component\Core\Model\EquipmentAttributeInterface;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -75,7 +75,7 @@ class EquipmentAttributeController extends BaseController
      *
      * @psalm-return array{'': FormView}
      */
-    protected function getAttributeFormsInAllLocales(AttributeInterface $attribute, array $localeCodes): array
+    protected function getAttributeFormsInAllLocales(EquipmentAttributeInterface $attribute, array $localeCodes): array
     {
         $attributeForm = $this->get('sylius.form_registry.attribute_type')->get($attribute->getType(), 'default');
 
@@ -96,7 +96,7 @@ class EquipmentAttributeController extends BaseController
 
     private function createFormAndView(
         $attributeForm,
-        AttributeInterface $attribute
+        EquipmentAttributeInterface $attribute
     ): FormView {
         return $this
             ->get('form.factory')
