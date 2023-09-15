@@ -28,8 +28,6 @@ final class EquipmentAttributeType extends AttributeType
     }
 
     /**
-     * @return string
-     *
      * @psalm-return 'owl_equipment_attribute'
      */
     public function getBlockPrefix(): string

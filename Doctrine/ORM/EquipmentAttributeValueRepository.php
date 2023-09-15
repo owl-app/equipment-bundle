@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Owl\Bundle\EquipmentBundle\Doctrine\ORM;
 
 use Owl\Component\Equipment\Model\EquipmentAttributeValueInterface;
-use Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository;
 use Owl\Component\Equipment\Repository\EquipmentAttributeValueRepositoryInterface;
+use Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository;
 
 /**
  * @template T of EquipmentAttributeValueInterface

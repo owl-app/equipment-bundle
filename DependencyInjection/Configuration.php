@@ -7,7 +7,6 @@ namespace Owl\Bundle\EquipmentBundle\DependencyInjection;
 use Owl\Bridge\SyliusResource\Controller\BaseController;
 use Owl\Bundle\EquipmentBundle\Form\Type\EquipmentType;
 use Owl\Component\Equipment\Model\Equipment;
-use Owl\Component\Equipment\Model\EquipmentInterface;
 use Sylius\Bundle\ResourceBundle\SyliusResourceBundle;
 use Sylius\Component\Resource\Factory\Factory;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;

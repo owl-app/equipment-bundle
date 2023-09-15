@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Owl\Bundle\EquipmentBundle\Form\Type;
 
-use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Sylius\Bundle\MoneyBundle\Form\Type\MoneyType;
+use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -30,7 +30,7 @@ final class EquipmentType extends AbstractResourceType
                 'required' => false,
                 'label' => 'owl.form.common.price',
                 'currency' => $options['currency'] ?? null,
-                'empty_data'  => '0'
+                'empty_data' => '0',
             ])
             ->add('other', TextType::class, [
                 'required' => false,
@@ -49,8 +49,6 @@ final class EquipmentType extends AbstractResourceType
     }
 
     /**
-     * @return string
-     *
      * @psalm-return 'owl_equipment'
      */
     public function getBlockPrefix(): string

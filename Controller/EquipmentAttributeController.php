@@ -21,7 +21,7 @@ class EquipmentAttributeController extends BaseController
             [
                 'types' => $this->get('sylius.registry.attribute_type')->all(),
                 'metadata' => $this->metadata,
-            ]
+            ],
         );
     }
 
@@ -32,7 +32,7 @@ class EquipmentAttributeController extends BaseController
 
         $form = $this->get('form.factory')->create(EquipmentAttributeChoiceType::class, null, [
             'multiple' => true,
-            'category' => $categoryId
+            'category' => $categoryId,
         ]);
 
         return $this->render($template, ['form' => $form->createView()]);
@@ -45,7 +45,7 @@ class EquipmentAttributeController extends BaseController
 
         $form = $this->get('form.factory')->create(EquipmentAttributeChoiceType::class, null, [
             'multiple' => true,
-            'category' => $categoryId
+            'category' => $categoryId,
         ]);
         $form->handleRequest($request);
 
@@ -96,7 +96,7 @@ class EquipmentAttributeController extends BaseController
 
     private function createFormAndView(
         $attributeForm,
-        EquipmentAttributeInterface $attribute
+        EquipmentAttributeInterface $attribute,
     ): FormView {
         return $this
             ->get('form.factory')
@@ -104,7 +104,7 @@ class EquipmentAttributeController extends BaseController
                 'value',
                 $attributeForm,
                 null,
-                ['label' => $attribute->getName(), 'configuration' => $attribute->getConfiguration()]
+                ['label' => $attribute->getName(), 'configuration' => $attribute->getConfiguration()],
             )
             ->createView();
     }

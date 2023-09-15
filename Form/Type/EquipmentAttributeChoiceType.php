@@ -6,8 +6,8 @@ namespace Owl\Bundle\EquipmentBundle\Form\Type;
 
 use Owl\Bundle\AttributeBundle\Form\Type\AttributeChoiceType;
 use Owl\Bundle\CoreBundle\Doctrine\ORM\EquipmentAttributeRepository;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\OptionsResolver\Options;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 final class EquipmentAttributeChoiceType extends AttributeChoiceType
 {
@@ -21,7 +21,7 @@ final class EquipmentAttributeChoiceType extends AttributeChoiceType
         $resolver
             ->setDefaults([
                 'choices' => function (Options $options) {
-                    if(!is_null($options['category'])) {
+                    if (null !== $options['category']) {
                         return  $this->attributeRepository->findByCategory($options['category'])->getQuery()->getResult();
                     }
 
@@ -30,7 +30,7 @@ final class EquipmentAttributeChoiceType extends AttributeChoiceType
                 'choice_value' => 'code',
                 'choice_label' => 'name',
                 'choice_translation_domain' => false,
-                'category' => null
+                'category' => null,
             ])
         ;
     }

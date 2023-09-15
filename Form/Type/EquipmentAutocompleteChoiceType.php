@@ -28,8 +28,6 @@ final class EquipmentAutocompleteChoiceType extends AbstractType
     }
 
     /**
-     * @return string
-     *
      * @psalm-return 'owl_equipment_autocomplete_choice'
      */
     public function getBlockPrefix(): string
@@ -38,8 +36,6 @@ final class EquipmentAutocompleteChoiceType extends AbstractType
     }
 
     /**
-     * @return string
-     *
      * @psalm-return ResourceAutocompleteChoiceType::class
      */
     public function getParent(): string

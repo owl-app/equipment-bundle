@@ -9,8 +9,6 @@ use Owl\Bundle\AttributeBundle\Form\Type\AttributeValueType;
 final class EquipmentAttributeValueType extends AttributeValueType
 {
     /**
-     * @return string
-     *
      * @psalm-return 'sylius_product_attribute_value'
      */
     public function getBlockPrefix(): string
